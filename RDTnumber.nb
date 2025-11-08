@@ -1,0 +1,96 @@
+Notebook[{Cell[
+BoxData[{RowBox[{"ClearAll[R, alpha, rTable, limit, recursiveZeta];"}],"\n",RowBox[
+{"alpha = 1.5;  (* You can try values like 1.1, 1.618, 2, etc. *)\n"}]}],"Input",
+CellLabel -> "In[9]:= ",ExpressionUUID -> "8682cb50-0184-44ed-942d-1bce280ac929"],Cell[
+BoxData[
+{RowBox[{RowBox[{RowBox[{"R","[","1","]"}]," ",":="," ","0"}],";"}],"\n",RowBox[{RowBox[
+{RowBox[{RowBox[{"R","[",RowBox[{"n_Integer","?","Positive"}],"]"}]," ",":="," ",RowBox[
+{RowBox[{"R","[","n","]"}]," ","="," ",RowBox[{"1"," ","+"," ",RowBox[{"Min","[",RowBox[
+{"Table","[",RowBox[{RowBox[{RowBox[{"(",RowBox[{RowBox[{"R","[","k","]"}]," ","+"," ",RowBox[
+{"R","[",RowBox[{"n"," ","-"," ","k"}],"]"}]}],")"}],"/","alpha"}],","," ",RowBox[
+{"{",RowBox[{"k",","," ","1",","," ",RowBox[{"n"," ","-"," ","1"}]}],"}"}]}],"]"}],"]"}]}]}]}],";"}],"\n"}]}],
+"Input",ExpressionUUID -> "9a4c1bee-a7bd-409e-b97e-b01e3a05ad00"],Cell[
+BoxData[RowBox[
+{"rTable"," ","="," ","Table","[","{","n",","," ","R","[","n","]","}",","," ","{","n",","," ","1",","," ","100","}","]",";"}]],
+"Input",CellLabel -> "In[13]:= ",ExpressionUUID -> "7d4e6d4b-d339-4fa2-8ccc-a40e8d9f3018"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"ListLinePlot[\n  rTable,\n  PlotStyle \[Rule] Blue,\n  PlotMarkers \[Rule] Automatic,\n  AxesLabel \[Rule] {\"n\", \"R(n)\"},\n  PlotLabel \[Rule] \n    Row[{\"Recursive Depth Function R(n), \[Alpha] = \", alpha}],\n  Epilog \[Rule] {\n    Red, Dashed, \n    Line[{{1, alpha/(alpha - 1)}, {100, alpha/(alpha - 1)}}]\n  },\n  ImageSize \[Rule] Large\n]\n"}]],
+"Input",CellLabel -> "In[14]:= ",ExpressionUUID -> "2d2c8697-c795-44d9-8e72-e200244f1b1f"],Cell[
+BoxData[
+GraphicsBox[{{},{{{},{},TagBox[{Hue[0.67`,0.6`,0.6`],Directive[PointSize[NCache[Rational[
+1,72],0.013888888888888888`]],AbsoluteThickness[2],RGBColor[0,0,1]],LineBox[CompressedData[
+"1:eJxdy3lIk2EAx/GXMishMzJT0HBiFmZi88ij8ud0XlM3d5UhMk3J+iPDArEDptFlFCquBCk0WnSYUInMCJotKkll/2SlFIJS5tWW15w7str7vs+7h/fl5fN+nx+vpEJatoqiqNKV9+/3/zElU9wD7v91ePTvWF32QfyN0ZWHvueL7Z23jEWC1S77wxBSNvJz0MPlQERsnZloGVvjcjAqN86ZjzZ7uhyCHC+LSOiz1uVQ8Au1/EgV7TD0NRp4pzW0d+Jrca2fRUc7HOOTylKtkXYEhLfHBCdGaEfic3lzxNwE7SjUm14EWcy098BLtOOYdoE2H4WXK1oMS7SjMe4x//LTMu0YmJ5Yzifaacciu1frCHPQjsOlYcPDN4z3oqCx9u1uJ+141Be3fznFOAGqm0ENdxknQtO9uauHcRJ0Z0uqBxnvwxnplGSM8X7Y4jKvTTM+gAehUc9mGSfjpH9w3yJjoLVsyxUrbTVwfEZ32Mb0FJjvGBvsTE+B6FVssYPpAvDDqycZqwXgBd7PcDI9FX7lARcZq1PhbfLpYHsa1reqetmeBk+9ZpjtQnSEd/9guxDb3hl/sT0dvkOx82xPR0nDgIXtGZhSxSyzPQO/Nf02tmdi4cg3O9szcU/Q5GB7Fl7XbHCyPQs1yiLWVDYeJzQRPRuVYTqii9AWYCS6CH6bRoieA++uCaLnoHPATPRc9F9dIHouop8uET0PVR+WiZ4HMd9OdDHqeA6ii+HZQ5iSoGCXkzUkSKokrJbgXBthvQR2PWEqH46P5H7Fo+Q+H/Jpcp+P67PkXorni+ReiioruZdCbCP3UtTZyb0MhQ5yL8M4abUMQie5l+ECaUqOdtKQ4z1ptRxDnL0c3zl7BWY4ewXmOHsFLJy9AlbOXgkbZ6+EnbNXwsHZu5k6yDXcrHaz3s3UIbe9m9Vu1ruZKmD8ByXQMDQ="]]},
+Function[Annotation[Slot[1],"Charting`Private`Tag#1"]]]},{TagBox[{Directive[PointSize[
+NCache[Rational[1,72],0.013888888888888888`]],AbsoluteThickness[2],RGBColor[0,0,1]],GeometricTransformationBox[
+InsetBox[BoxData[FormBox[StyleBox[GraphicsBox[{EdgeForm[],DiskBox[{0,0}]},PlotRangePadding -> Scaled[
+0.15`],ExpressionUUID -> "b14d05d6-955e-438a-994d-9e6a3f179bef",ImageSize -> {10.976`,10.976`}],
+GraphicsBoxOptions -> {DefaultBaseStyle -> Directive[PointSize[Rational[1,72]],AbsoluteThickness[
+2],RGBColor[0,0,1]]},StripOnInput -> False],TraditionalForm]],{0.`,0.`},Automatic,
+Offset[10.976`]],{{{1.`,0.`}},{{2.`,1.`}},{{3.`,1.6666666666666665`}},{{4.`,2.1111111111111107`}},{{5.`,2.407407407407407`}},{{6.`,2.604938271604938`}},{{7.`,2.7366255144032916`}},{{8.`,2.824417009602194`}},{{9.`,2.8829446730681294`}},{{10.`,2.9219631153787526`}},{{11.`,2.9479754102525018`}},{{12.`,2.9653169401683344`}},{{13.`,2.9768779601122226`}},{{14.`,2.9845853067414816`}},{{15.`,2.989723537827654`}},{{16.`,2.993149025218436`}},{{17.`,2.995432683478957`}},{{18.`,2.9969551223193047`}},{{19.`,2.997970081546203`}},{{20.`,2.998646721030802`}},{{21.`,2.9990978140205344`}},{{22.`,2.999398542680356`}},{{23.`,2.9995990284535705`}},{{24.`,2.9997326856357134`}},{{25.`,2.999821790423809`}},{{26.`,2.9998811936158725`}},{{27.`,2.9999207957439147`}},{{28.`,2.9999471971626095`}},{{29.`,2.9999647981084063`}},{{30.`,2.999976532072271`}},{{31.`,2.9999843547148473`}},{{32.`,2.999989569809898`}},{{33.`,2.999993046539932`}},{{34.`,2.9999953643599544`}},{{35.`,2.999996909573303`}},{{36.`,2.999997939715535`}},{{37.`,2.9999986264770233`}},{{38.`,2.9999990843180155`}},{{39.`,2.9999993895453434`}},{{40.`,2.999999593030229`}},{{41.`,2.999999728686819`}},{{42.`,2.999999819124546`}},{{43.`,2.9999998794163636`}},{{44.`,2.999999919610909`}},{{45.`,2.9999999464072724`}},{{46.`,2.999999964271515`}},{{47.`,2.9999999761810097`}},{{48.`,2.999999984120673`}},{{49.`,2.999999989413782`}},{{50.`,2.999999992942521`}},{{51.`,2.999999995295014`}},{{52.`,2.9999999968633424`}},{{53.`,2.999999997908895`}},{{54.`,2.99999999860593`}},{{55.`,2.99999999907062`}},{{56.`,2.999999999380413`}},{{57.`,2.999999999586942`}},{{58.`,2.999999999724628`}},{{59.`,2.9999999998164184`}},{{60.`,2.999999999877612`}},{{61.`,2.999999999918408`}},{{62.`,2.9999999999456053`}},{{63.`,2.9999999999637366`}},{{64.`,2.9999999999758242`}},{{65.`,2.9999999999838827`}},{{66.`,2.999999999989255`}},{{67.`,2.9999999999928364`}},{{68.`,2.9999999999952243`}},{{69.`,2.999999999996816`}},{{70.`,2.9999999999978773`}},{{71.`,2.9999999999985847`}},{{72.`,2.9999999999990563`}},{{73.`,2.9999999999993707`}},{{74.`,2.9999999999995803`}},{{75.`,2.9999999999997202`}},{{76.`,2.9999999999998135`}},{{77.`,2.9999999999998757`}},{{78.`,2.999999999999917`}},{{79.`,2.9999999999999445`}},{{80.`,2.9999999999999627`}},{{81.`,2.999999999999975`}},{{82.`,2.999999999999983`}},{{83.`,2.9999999999999885`}},{{84.`,2.999999999999992`}},{{85.`,2.9999999999999947`}},{{86.`,2.9999999999999964`}},{{87.`,2.9999999999999973`}},{{88.`,2.9999999999999982`}},{{89.`,2.9999999999999987`}},{{90.`,2.999999999999999`}},{{91.`,2.999999999999999`}},{{92.`,2.999999999999999`}},{{93.`,2.999999999999999`}},{{94.`,2.999999999999999`}},{{95.`,2.999999999999999`}},{{96.`,2.999999999999999`}},{{97.`,2.999999999999999`}},{{98.`,2.999999999999999`}},{{99.`,2.999999999999999`}},{{100.`,2.999999999999999`}}}]},
+Function[Annotation[Slot[1],"Charting`Private`Tag#1"]]]}},{{},{}}},{DisplayFunction -> Identity,DisplayFunction -> Identity,RuleDelayed[
+PlotInteractivity,True],DefaultBaseStyle -> {"PlotGraphics","Graphics"},AspectRatio -> NCache[
+Power[GoldenRatio,-1],0.6180339887498948`],Axes -> {True,True},AxesLabel -> {FormBox[
+TagBox["\"n\"",HoldForm],TraditionalForm],FormBox[TagBox["\"R(n)\"",HoldForm],TraditionalForm]},AxesOrigin -> {0,0},RuleDelayed[
+DisplayFunction,Identity],Epilog -> {RGBColor[1,0,0],Dashing[{Small,Small}],LineBox[
+{{1,3.`},{100,3.`}}]},Frame -> {{False,False},{False,False}},FrameLabel -> {{None,None},{None,None}},FrameTicks -> {{Automatic,Automatic},{Automatic,Automatic}},GridLines -> {None,None},GridLinesStyle -> Directive[
+GrayLevel[0.5`,0.4`]],ImageSize -> Large,Method -> CompressedData["1:eJzlVltsTEEY3q0qeqEukZIgJRLx4kEi8cColm2TLts9y5MHp3vm7I6enlkzc2S3Eg8SDxJvvBAh6kGKeJBWkHjxQKh71KWXUIo24hYikZD455y9226J48kku/nPnJnv/+b/vzP/X9tKg/oMj8fDS+GvmXChl6SegpaBlQow6uKEB1RNI2ZE98q3ZfCnhFUDa2z3nHO+4Y5DKG/bHDAasK5ahlhPLVNTWUIRCQPzaRLPErRdFSSct2l+ZpOPqbEoCfMmU2CmhgWhpj6pCM0pYGzFjMM6ttIen/MpzQIjBFhtfmpxHKCc2Kgl2ai2EWIW5pPB2KgaHBdwtEHXcVjwooTkORtJJGrATzhRG2el9MQgGpTI+byX07NhApSYf4ElKTUwGjOIiXnuuQuESmcY65S111uMU+anGk4HpwBuzFDDuB2boiiupB5XZNjqDKPAu4QiHzdRM99FdUYZfsyjtpScQMyUYK2cGpbAdnwU0oFJ2a+nz4IIGFQ4EAWUb0eJMEgw2YWdFE+VGL719dSgjF1cuO9ty8U7KCmzl4gdOSzHGPqVUAgk3AbB5lnpmAhft8d7xE5/euBvrR5BbE3545OxNVddwl8k6S8cQklHrxEb7pDf8E2X8B/2fF27Zd87xAZXHD9bc+4JYst83s7t19zCf3Vv8cC3PS8QC9qZeJ5KxFuX8IM9Q6XPukcRO7p5wZlDxwYQ+zhv/72pqy67hO+o5SlK3pyQX489PrqEn0JLGqMpA/a7yH8MZQ7iJGLUJf7fu6TuISy3b8kx4jb/RlvuoE/H6Evpp9cl/stXL22YdQrCsq7vS4uv23V90ooTVTtqPyAWrf/+Zu8I3D/9fXcr+6+fdwn/gGdn3aWDbxC78PnHw/jYI8SaV23a1lvz3CX8zsDKJf0f7qeuHbh/IoM3riyLD/wmfvpCr5KOoI8g5h/2JpXSUM0IHm+fo+yu/H2zwdgcE6QdKowsIX6VtUHLMV5ZlMubzLBhaThdwcFb0Q4op9xP3DC5w0gph3ko8wzKt4Lza/a/pTRXuqaUQR5UgXmIUkPupmbxBmWGLTIOXUdio2U67aE3JbX0TC6CN32F5CxKzzRpcH4iEpkGSwH+xJujvIDKRIEFJA3+zzwU+AJm28GLEaxtVQ0L/0+R+AktRljn"],RuleDelayed[
+PlotInteractivity,True],PlotLabel -> FormBox[TemplateBox[{"\"Recursive Depth Function R(n), \[Alpha] = \"","1.5`"},
+"RowDefault"],TraditionalForm],PlotRange -> {{0,100.`},{0,2.999999999999999`}},PlotRangeClipping -> True,PlotRangePadding -> {{Scaled[
+0.02`],Scaled[0.02`]},{Scaled[0.02`],Scaled[0.05`]}},Ticks -> {Automatic,Automatic},RuleDelayed[
+PlotInteractivity,True]},ExpressionUUID -> "6d44608e-08b5-4c98-89ef-f267892a9a7f"],
+StandardForm],"Output",CellLabel -> "Out[14]= ",ExpressionUUID -> "61d6f496-1039-4812-be81-4383f4792816"]},
+Open],ExpressionUUID -> "f7a540fb-cd22-429b-bb34-5aac955b88b5"],Cell[
+BoxData[RowBox[
+{"Grid","[","Partition","[","rTable","[","[","1"," ",";;"," ","20","]","]",","," ","5","]",","," ","Frame"," ","\[Rule]"," ","All","]"}]],
+"Input",ExpressionUUID -> "d0a9e14f-0e93-4999-8870-40bc2ba75d11"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"limit = N[alpha / (alpha - 1)];"}],"\n",RowBox[{"Print[\"Saturation Limit: R(n) \[RightArrow] \", limit];"}],"\n",RowBox[
+{"Print[\"R(100) = \", R[100], \", Difference = \", Abs[R[100] - limit]];\n"}]}],
+"Input",CellLabel -> "In[15]:= ",ExpressionUUID -> "98451fc0-3a46-41ea-8447-b03f79d9c045"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Saturation Limit: R(n) \[RightArrow] \"","\[InvisibleSpace]","3.`"}],
+SequenceForm["Saturation Limit: R(n) \[RightArrow] ",3.`],Editable -> False],StandardForm],
+"Print",ExpressionUUID -> "bc61b0c6-2848-45c3-8c6f-b950426cf9f1"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"R(100) = \"","\[InvisibleSpace]","2.999999999999999`","\[InvisibleSpace]","\", Difference = \"","\[InvisibleSpace]","8.881784197001252`*^-16"}],
+SequenceForm["R(100) = ",2.999999999999999`,", Difference = ",8.881784197001252`*^-16],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "a611fff8-4209-4c21-9bcf-a2bf710a1ac7"]},
+Open],ExpressionUUID -> "341112a4-3cc8-45d4-b6ca-51a388045756"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"recursiveZeta[s_] := N[Sum[Exp[-R[n]] / n^s, {n, 1, 100}]];"}],"\n",RowBox[
+{"Print[\"Recursive Zeta Transform at s = 2: \", recursiveZeta[2]];\n"}]}],"Input",
+CellLabel -> "In[18]:= ",ExpressionUUID -> "00c9bec8-2362-4c8c-87d6-523779ff2784"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Recursive Zeta Transform at s = 2: \"","\[InvisibleSpace]","1.1339519095584767`"}],
+SequenceForm["Recursive Zeta Transform at s = 2: ",1.1339519095584767`],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "98db40fb-7bbd-4c51-8b38-0c0aa1b3de35"]},
+Open],ExpressionUUID -> "0bede99f-6a5e-458e-8bff-e31b8a7432e7"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"GraphPlot[\n  {6 \[Rule] 1, 6 \[Rule] 5, 5 \[Rule] 2, 5 \[Rule] 3, 3 \[Rule] 1, 3 \[Rule] 2},\n  VertexLabels \[Rule] \"Name\",\n  PlotLabel \[Rule] \"Optimal Recursive Division Tree for R(6)\",\n  DirectedEdges \[Rule] True,\n  ImageSize \[Rule] Medium\n]\n"}]],
+"Input",CellLabel -> "In[8]:= ",ExpressionUUID -> "8f8bc14e-8cab-4a5f-a99f-cb04a453be64"],Cell[
+BoxData[
+GraphicsBox[{{Arrowheads[Medium],Directive[Opacity[0.7`],Hue[0.6`,0.7`,0.7`],CapForm[
+"Round"]],ArrowBox[BezierCurveBox[{{0.`,3.`},{0.`,2.9530864197530864`},{0.`,2.901234567901235`},{0.`,2.8444444444444446`},{0.`,2.7827160493827163`},{0.`,2.7160493827160495`},{0.`,2.644444444444445`},{0.`,2.567901234567902`},{0.`,2.48641975308642`},{0.`,2.4000000000000004`},{0.`,2.311111111111112`},{0.`,2.222222222222222`},{0.`,2.1333333333333337`},{0.`,2.0444444444444447`},{0.`,1.9555555555555557`},{0.`,1.8666666666666667`},{0.`,1.777777777777778`},{0.`,1.688888888888889`},{0.`,1.4`},{0.003491885339192827`,1.3125574973768561`},{0.013967541356771309`,1.2280077672852039`},{0.03142696805273544`,1.1463508097250426`},{0.055870165427085235`,1.0675866246963714`},{0.0872971334798207`,0.9917152121991917`},{0.12570787221094176`,0.9187365722335026`},{0.17110238162044855`,0.8486507047993046`},{0.22348066170834094`,0.7814576098965974`},{0.282842712474619`,0.717157287525381`},{0.3938510320787113`,0.6061489679212886`},{0.49702830754637445`,0.5029716924536255`},{0.5923745388776085`,0.4076254611223916`},{0.6798897260724133`,0.32011027392758673`},{0.759573869130789`,0.24042613086921102`},{0.8314269680527355`,0.16857303194726456`},{0.8954490228382528`,0.10455097716174719`},{0.951640033487341`,0.048359966512659044`},{1.`,0.`}}],
+0.030239520958083826`],ArrowBox[{{0.`,3.`},{1.`,2.`}},0.030239520958083826`],ArrowBox[
+BezierCurveBox[{{1.`,2.`},{1.0483599665126588`,1.9516400334873407`},{1.1045509771617472`,1.8954490228382528`},{1.1685730319472647`,1.8314269680527357`},{1.240426130869211`,1.7595738691307892`},{1.3201102739275867`,1.6798897260724133`},{1.4076254611223917`,1.5923745388776085`},{1.5029716924536256`,1.4970283075463744`},{1.6061489679212888`,1.3938510320787114`},{1.717157287525381`,1.282842712474619`},{1.776519338291659`,1.2185423901034025`},{1.8288976183795513`,1.1513492952006954`},{1.8742921277890585`,1.0812634277664974`},{1.9127028665201795`,1.0082847878008083`},{1.944129834572915`,0.9324133753036284`},{1.9685730319472647`,0.8536491902749577`},{1.9860324586432287`,0.771992232714796`},{1.9965081146608072`,0.6874425026231434`},{2.`,0.6`},{2.`,0.5135802469135802`},{2.`,0.4320987654320988`},{2.0000000000000004`,0.35555555555555557`},{2.`,0.2839506172839506`},{2.`,0.2172839506172839`},{2.`,0.15555555555555556`},{2.`,0.09876543209876543`},{2.`,0.0469135802469136`},{2.`,0.`}}],
+0.030239520958083826`],ArrowBox[{{1.`,2.`},{1.`,1.`}},0.030239520958083826`],ArrowBox[
+{{1.`,1.`},{1.`,0.`}},0.030239520958083826`],ArrowBox[{{1.`,1.`},{2.`,0.`}},0.030239520958083826`]},{Directive[
+Hue[0.6`,0.5`,1.`],EdgeForm[Directive[GrayLevel[0],Opacity[0.7`]]]],{DiskBox[{0.`,3.`},
+0.030239520958083826`],InsetBox[FormBox["6",TraditionalForm],Offset[{2,2},{0.030239520958083826`,3.0302395209580837`}],
+ImageScaled[{0,0}],BaseStyle -> "Graphics"]},{DiskBox[{1.`,0.`},0.030239520958083826`],InsetBox[
+FormBox["1",TraditionalForm],Offset[{2,2},{1.030239520958084`,0.030239520958083826`}],
+ImageScaled[{0,0}],BaseStyle -> "Graphics"]},{DiskBox[{1.`,2.`},0.030239520958083826`],InsetBox[
+FormBox["5",TraditionalForm],Offset[{2,2},{1.030239520958084`,2.0302395209580837`}],
+ImageScaled[{0,0}],BaseStyle -> "Graphics"]},{DiskBox[{2.`,0.`},0.030239520958083826`],InsetBox[
+FormBox["2",TraditionalForm],Offset[{2,2},{2.0302395209580837`,0.030239520958083826`}],
+ImageScaled[{0,0}],BaseStyle -> "Graphics"]},{DiskBox[{1.`,1.`},0.030239520958083826`],InsetBox[
+FormBox["3",TraditionalForm],Offset[{2,2},{1.030239520958084`,1.030239520958084`}],
+ImageScaled[{0,0}],BaseStyle -> "Graphics"]}}},{FormatType -> TraditionalForm,FrameTicks -> None,ImageSize -> Medium,PlotLabel -> FormBox[
+"\"Optimal Recursive Division Tree for R(6)\"",TraditionalForm]},ExpressionUUID -> "a4c7ace3-4b6b-43ad-bf12-090a76fa570e"],
+StandardForm],"Output",CellLabel -> "Out[8]= ",ExpressionUUID -> "185b6234-f8d3-42a4-a432-78fc2dd2c18e"]},
+Open],ExpressionUUID -> "594ccd68-5c29-4d07-a201-7ddaf9edd533"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.3 for Wolfram Cloud 1.74 (September 30, 2025)"]
